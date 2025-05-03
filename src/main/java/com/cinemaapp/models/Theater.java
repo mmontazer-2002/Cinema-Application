@@ -1,4 +1,4 @@
-package com.app.entities;
+package com.cinemaapp.models;
 
 public class Theater {
     private int theaterId;
@@ -32,6 +32,10 @@ public class Theater {
 
     public void setBookedSeats(int bookedSeats) {
         this.bookedSeats = bookedSeats;
+    }
+
+    public boolean AvailableSeats(){
+        return true;
     }
 
 

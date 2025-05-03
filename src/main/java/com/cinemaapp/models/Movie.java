@@ -1,16 +1,19 @@
-package com.app.entities;
+package com.cinemaapp.models;
 
 public class Movie {
     private int movieId;
     private String title;
     private String genre;
     private int duration;
+    private int price;
 
-    public Movie(int movieId, String title, String genre, int duration) {
+
+    public Movie(int movieId, String title, String genre, int duration, int price) {
         this.movieId = movieId;
         this.title = title;
         this.genre = genre;
         this.duration = duration;
+        this.price = price;
     }
 
     public int getMovieId() {
@@ -43,6 +46,14 @@ public class Movie {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override

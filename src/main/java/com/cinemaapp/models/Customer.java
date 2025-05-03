@@ -1,4 +1,4 @@
-package com.app.entities;
+package com.cinemaapp.models;
 
 public class Customer {
     private int customerId;
