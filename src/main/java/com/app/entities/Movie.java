@@ -1,14 +1,24 @@
 package com.app.model;
 
 public class Movie {
+    private int movieId;
     private String title;
     private String genre;
     private int duration;
 
-    public Movie(String title, String genre, int duration) {
+    public Movie(int movieId, String title, String genre, int duration) {
+        this.movieId = movieId;
         this.title = title;
         this.genre = genre;
         this.duration = duration;
+    }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
     public String getTitle() {
@@ -38,7 +48,8 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "title='" + title + '\'' +
+                "movieId='" + movieId + '\'' +
+                ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
                 ", duration=" + duration +
                 '}';
