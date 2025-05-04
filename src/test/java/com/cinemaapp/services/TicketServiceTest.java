@@ -36,4 +36,16 @@ public class TicketServiceTest {
 
         assertEquals("Not enough tickets available.", exception.getMessage());
     }
+
+    @Test
+    void getAllMovies_shouldReturnAllAddedMovies() {
+        Movie secondMovie = new Movie(2, "Interstellar", 60, new Theater(2, 80));
+
+        ticketService.addMovie(movie);
+        ticketService.addMovie(secondMovie);
+
+        assertEquals(2, ticketService.getAllMovies().size());
+        assertTrue(ticketService.getAllMovies().contains(movie));
+        assertTrue(ticketService.getAllMovies().contains(secondMovie));
+    }
 }
