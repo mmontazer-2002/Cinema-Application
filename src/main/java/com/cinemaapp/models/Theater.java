@@ -34,8 +34,21 @@ public class Theater {
         this.bookedSeats = bookedSeats;
     }
 
-    public boolean AvailableSeats(){
+    public boolean AvailableSeats() {
         return true;
+    }
+
+
+    public boolean hasAvailableSeats(int requestedSeats) {
+        return totalSeats - bookedSeats >= requestedSeats;
+    }
+
+    public void bookSeats(int requestedSeats) {
+        if (hasAvailableSeats(requestedSeats)) {
+            bookedSeats += requestedSeats;
+        } else {
+            throw new IllegalArgumentException("not enough seats!!!");
+        }
     }
 
 
@@ -47,4 +60,6 @@ public class Theater {
                 ", bookedSeats=" + bookedSeats +
                 '}';
     }
+
+
 }
