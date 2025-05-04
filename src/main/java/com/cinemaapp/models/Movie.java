@@ -3,17 +3,14 @@ package com.cinemaapp.models;
 public class Movie {
     private int movieId;
     private String title;
-    private String genre;
-    private int duration;
     private int price;
+    private Theater theater;
 
-
-    public Movie(int movieId, String title, String genre, int duration, int price) {
+    public Movie(int movieId, String title, int price, Theater theater) {
         this.movieId = movieId;
         this.title = title;
-        this.genre = genre;
-        this.duration = duration;
         this.price = price;
+        this.theater = theater;
     }
 
     public int getMovieId() {
@@ -32,22 +29,6 @@ public class Movie {
         this.title = title;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
     public int getPrice() {
         return price;
     }
@@ -56,13 +37,21 @@ public class Movie {
         this.price = price;
     }
 
+    public Theater getTheater() {
+        return theater;
+    }
+
+    public void setTheater(Theater theater) {
+        this.theater = theater;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +
-                "movieId='" + movieId + '\'' +
+                "movieId=" + movieId +
                 ", title='" + title + '\'' +
-                ", genre='" + genre + '\'' +
-                ", duration=" + duration +
+                ", price=" + price +
+                ", theater=" + theater +
                 '}';
     }
 }
